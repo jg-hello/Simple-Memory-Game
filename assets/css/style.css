@@ -54,7 +54,7 @@ body{
 
 #startBtn{
     border: none;
-    npx tailwindcss init
+   
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -114,7 +114,7 @@ body{
 }
 
 
-.extraPanels {
+.hiddenPanels {
   display: none !important;
 }
 

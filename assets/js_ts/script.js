@@ -10,6 +10,7 @@ const infoAnimation = document.querySelector(".info-animation");
 
 function resetGame(text) {
     alert(text); //alert message
+
     sequence = [];
     playerSequence = [];
     level = 0;
@@ -39,7 +40,7 @@ function activatePanel(panelNum) {
     setTimeout(() => {
         
         panel.classList.remove('activated');
-    }, 400); //each panel is "active" for 300ms for when the sequence starts
+    }, 300); //each panel is "active" for 300ms for when the sequence starts
 
 }
 function playRound(nextSequence) {
@@ -75,16 +76,32 @@ const nextRound = () => {
 function handleClick(panel) {
     const i = playerSequence.push(panel) - 1; // adds new item to playerSequence array and stores it to i variable
     const sound = document.querySelector(`[data-sound='${panel}']`);
+    const loseSound = document.getElementById("youLoseSound")
+    const winMusic = document.getElementById('winMusic')
     sound.play();
 
     const remainingTaps = sequence.length - playerSequence.length; //remaining taps needed to be pressed
     
     if (playerSequence[i] !== sequence[i]) { //if the playerSequence array(tap order) !== the computer sequence array, the game resets
+        sound.pause(); //pause panel sounds so it doesnt overlap with losesound audio
+        loseSound.play();
         resetGame('Game Over. Try Again!');
         return;
     }
+
+   /*    
+    if (playerSequence.length === sequence.length) { //for extra panels to appear
+        const extraPanels = document.getElementById('extraPanels')
+        if (playerSequence.length ===  2 ){
+            extraPanels.classList.remove('hiddenPanels')
+            return;
+        }
+       
+    }
+     */
     if (playerSequence.length === sequence.length) {
-        if (playerSequence.length === 8 ){
+        if (playerSequence.length ===  3 ){
+            winMusic.play();
             resetGame(`Congratulations, You've won!`);
             return;
         }
