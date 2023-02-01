@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500&display=swap');
+
+
+body{
+    background-color: black;
+/*    display: flex;
+  justify-content: center;
+    align-items: center; */
+}
+.panels{
+    background-color: rgb(127, 127, 232);
+    border-radius: 5%;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+.panels:hover{
+  transform: translateY(-5px);
+}
+.panels:active,
+.panels.activated{
+    background-color: aliceblue;
+    transform: translateY(10px);
+    font-size: 80px;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+/* .glow{
+  border-radius: 5%;
+  background-color: #fff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+ */
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+  }
+  
+ 
+  
+  .noMargin {
+    margin: 0px;
+  }
+
+#startBtn{
+    border: none;
+    npx tailwindcss init
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(122, 17, 47);
+    margin: 10px;
+    width: 340px;
+    height: 50px;
+}
+#startBtn:active{
+    background-color: blueviolet;
+}
+.hidden{
+    display: none !important;
+}
+.info{
+  margin: 10px;
+  width: 340px;
+  height: 50px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  font-family: 'Spline Sans Mono', monospace;
+}
+.info-animation{
+    animation: blinker 2s  cubic-bezier(.5, 0, 1, 1) infinite; /*Blinking animation for fun */
+   
+
+
+}
+@keyframes blinker {
+    from { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    to { opacity: 1.0; }
+  }
+
+
+  .js-heading{
+    color: white;
+    margin: 10px;
+    width: 340px;
+    height: 50px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+
+  }
+
+  
+.unclickable { /* makes panels unclickable */
+  pointer-events: none;
+}
+
+
+.extraPanels {
+  display: none !important;
+}
+
+#header{
+  border-color: aliceblue;
+  border-style: double;
+  display: flex;
+  justify-content: center;
+
+  
+}
+

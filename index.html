@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./assets/css/style.css" rel="stylesheet"/>
+
+    
+
+</head>
+<body>
+
+  <header class="row" id ="header">
+    <h1 class="heading js-heading">Memory Game</h1>
+  </header>
+
+<section class = "unclickable js-container">
+  <div class="row noMargin">
+    <div class = "panels glow" data-panel="panelOne"></div> 
+    <div class = "panels glow" data-panel="panelTwo"></div> 
+    <div class = "panels glow" data-panel="panelThree"></div> 
+  </div>
+
+  <div class="row noMargin">
+    <div class = "panels glow" data-panel="panelFour"></div> 
+    <div class = "panels glow" data-panel="panelFive"></div> 
+    <div class = "panels glow" data-panel="panelSix"></div> 
+  </div>
+
+  <div class="row noMargin">
+    <div class = "panels glow" data-panel="panelSeven"></div> 
+    <div class = "panels glow" data-panel="panelEight"></div> 
+    <div class = "panels glow" data-panel="panelNine"></div> 
+  </div>
+
+
+  <div class="row noMargin extraPanels"> <!-- Made for harder mode, hidden default -->
+    <div class = "panels glow" data-panel="panelTen"></div> 
+    <div class = "panels glow" data-panel="panelEleven"></div> 
+    <div class = "panels glow" data-panel="panelTwelve"></div> 
+  </div>
+  
+</section>
+<div class="row noMargin">
+  <button type="button" id = "startBtn">
+   <h2 class="startTxt">Start Game</h2>
+   </button>
+   <span class="info info-animation js-info hidden">Text</span>
+  </div> 
+
+<div class="hidden">
+    <audio preload='auto'
+      src="./assets/sound/panelOneSound.wav"
+      data-sound="panelOne"  type="audio/wav"  class = "audio" id="soundOne">
+    </audio>
+    <audio  preload='auto'
+    src="./assets/sound/panelTwoSound.wav"
+    data-sound="panelTwo" type="audio/wav"  class = "audio"id="soundTwo">
+   </audio> 
+  <audio preload='auto'
+  src="./assets/sound/panelThreeSound.wav"
+  data-sound="panelThree" type="audio/wav"  class = "audio" id="soundThree">
+  </audio>   
+
+  <audio preload='auto'
+  src="./assets/sound/panelFourSound.wav"
+  data-sound="panelFour" type="audio/wav"  class = "audio"id="soundFour">
+  </audio>   
+
+  <audio preload='auto'
+  src="./assets/sound/panelFiveSound.wav"
+  data-sound="panelFive" type="audio/wav" class = "audio" id="soundFive">
+  </audio>  
+
+  <audio preload='auto'
+  src="./assets/sound/panelSixSound.wav"
+  data-sound="panelSix" type="audio/wav"  class = "audio" id="soundSix">
+  </audio>  
+
+  <audio preload='auto'
+  src="./assets/sound/panelSevenSound.wav"
+  data-sound="panelSeven" type="audio/wav"  class = "audio" id="soundSeven">
+  </audio>   
+
+  <audio preload='auto'
+  src="./assets/sound/panelEightSound.wav"
+  data-sound="panelEight" type="audio/wav"  class = "audio" id="soundEight">
+  </audio>  
+
+  <audio preload='auto'
+  src="./assets/sound/panelNineSound.wav"
+  data-sound="panelNine" type="audio/wav"  class = "audio" id="soundNne">
+  </audio>
+</div>
+
+<script src="./assets/js_ts/script.js"></script>
+</body>
+
+</html>
