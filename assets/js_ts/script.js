@@ -100,7 +100,7 @@ function handleClick(panel) {
     }
      */
     if (playerSequence.length === sequence.length) {
-        if (playerSequence.length ===  3 ){
+        if (playerSequence.length ===  20 ){
             winMusic.play();
             resetGame(`Congratulations, You've won!`);
             return;
